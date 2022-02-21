@@ -1,0 +1,158 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// vuetify reset stylings:
+
+.v-menu__content {
+    top: 348px !important;
+
+    @include tablet {
+        top: 268px !important;
+    }
+
+    * {
+        box-shadow: none !important;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ffffff4f;
+        border-radius: 5px;
+        min-height: 30px;
+    }
+
+    .theme--light.v-list {
+        background: $dark-color-tertiary !important;
+        padding: 0;
+    }
+
+    .v-list-item__title {
+        color: $light-color-primary !important;
+        font-size: $size-small !important;
+    }
+}
+
+.v-sheet.v-stepper:not(.v-sheet--outlined) {
+    @include tablet {
+        box-shadow: none !important;
+    }
+}
+
+.v-sheet.v-list {
+    border-radius: $radius-large;
+}
+
+.v-input__append-inner {
+    margin-top: 12px !important;
+}
+
+.v-input {
+    width: 100% !important;
+    font-size: $size-small;
+}
+
+.v-label {
+    font-size: $size-small !important;
+    top: 13px !important;
+    color: $light-color-primary !important;
+}
+
+.v-icon {
+    color: $light-color-primary !important;
+}
+
+.v-input__slot {
+    min-height: 46px !important;
+}
+
+.v-text-field--outlined {
+    border-radius: $radius-large;
+}
+
+.v-text-field--outlined.v-input--is-focused fieldset,
+.v-text-field--outlined.v-input--has-state fieldset {
+    border: $border-small $light-color-tertiary !important;
+}
+
+.theme--light.v-list-item:hover::before {
+    opacity: 0.2;
+}
+
+.v-text-field--outlined .v-input__prepend-outer,
+.v-text-field--outlined .v-input__append-outer {
+    margin-top: 12px !important;
+}
+
+.v-text-field--outlined .v-label--active {
+    transform: translateY(-23px) scale(0.9);
+}
+
+.v-application p {
+    margin: 0;
+}
+
+// Dialog Stylings reset:
+
+#dialog__reset {
+    background-color: $light-color-primary !important;
+    color: $dark-color-primary !important;
+}

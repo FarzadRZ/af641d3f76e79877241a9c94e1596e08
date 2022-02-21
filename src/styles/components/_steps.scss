@@ -1,0 +1,130 @@
+.steps {
+    background: $dark-color-secondary !important;
+    border-radius: $radius-large !important;
+    border: $border-small $light-color-tertiary !important;
+    height: 100%;
+    width: 100%;
+
+    @include tablet {
+        background: $dark-color-primary !important;
+        border-radius: 0 !important;
+        border: 0 !important;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $red-color-primary !important;
+        border: $border-small $red-color-tertiary;
+
+        &-text {
+            font-size: $size-tiny;
+            color: $red-color-tertiary;
+            font-weight: $weight-normal;
+            margin-top: 10px;
+        }
+
+        .v-stepper__label {
+            width: 130px;
+            display: flex !important;
+            justify-content: center;
+            position: absolute;
+            bottom: -20px;
+        }
+
+        &-icon {
+            position: absolute !important;
+            top: -38px;
+            color: $red-color-tertiary !important;
+
+            @include mobile-md {
+                font-size: 20px !important;
+                top: -28px;
+            }
+        }
+
+        @include mobile-md {
+            width: 45px;
+            height: 45px;
+            display: none !important;
+        }
+    }
+
+    .v-stepper__step--active {
+        background: $green-color-primary !important;
+        border: $border-small $green-color-tertiary;
+
+        @include mobile-md {
+            display: flex !important;
+        }
+
+        .steps__item-text {
+            color: $green-color-tertiary;
+        }
+
+        .steps__item-icon {
+            color: $green-color-tertiary !important;
+        }
+    }
+
+    &__divider {
+        border-color: $red-color-tertiary !important;
+        margin: 0px 20px !important;
+
+        @include mobile-md {
+            display: none;
+        }
+    }
+
+    .v-stepper__step__step {
+        display: none;
+    }
+
+    .v-stepper__header {
+        height: auto;
+        width: 500px;
+        margin: 20px auto;
+        box-shadow: none;
+
+        @include tablet {
+            width: 390px;
+        }
+
+        @include mobile-md {
+            width: 320px;
+            justify-content: center;
+        }
+    }
+
+    .v-stepper__step {
+        padding: 0;
+    }
+}
+
+// styling for reset overflow problem in vuetify:
+
+@include tablet {
+
+    #app,
+    .checkout {
+        height: 100% !important;
+    }
+
+    .checkout__container {
+        height: 100% !important;
+    }
+
+    .v-application--wrap {
+        width: 100% !important;
+    }
+
+    .v-stepper {
+        overflow: unset !important;
+    }
+}

@@ -1,0 +1,61 @@
+// adding specific font from Google Fonts = " Ubuntu "
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+
+// importing all the essential stylings from " styles/sass/ " folder
+
+@import "./core/_reset.scss";
+
+@import "./abstracts/_variables.scss";
+@import "./abstracts/_mixins.scss";
+
+@import "./components/_buttons.scss";
+@import "./components/_steps.scss";
+@import "./components/_inputs.scss";
+@import "./components/_redirection.scss";
+@import "./components/_card.scss";
+@import "./components/_preview.scss";
+
+@import "./layout/_header.scss";
+@import "./layout/_main.scss";
+@import "./layout/_footer.scss";
+
+@import "./pages/_bookhotel.scss";
+@import "./pages/_bookroom.scss";
+@import "./pages/_checkout.scss";
+
+html {
+    overflow-y: auto;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    background: $dark-color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+// container stylings:
+.container {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include tablet {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.v-application--wrap {
+    justify-content: center;
+    align-items: center;
+}

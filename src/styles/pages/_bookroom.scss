@@ -1,0 +1,191 @@
+.room {
+
+    &__container {
+        @include mobile-md {
+            height: 100% !important;
+        }
+    }
+
+    &__checkin {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: $dark-color-primary;
+        border-radius: $radius-large;
+        padding: 10px 20px;
+        color: $light-color-primary;
+
+        &-title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: $size-large;
+            margin-bottom: 5px;
+
+            small {
+                font-size: $size-normal;
+                font-weight: $weight-normal;
+                margin-left: 10px;
+                margin-top: 4px;
+            }
+        }
+
+        &-info {
+            display: flex;
+
+            @include mobile-md {
+                flex-flow: wrap;
+            }
+
+            span {
+                margin-right: 10px;
+                font-size: $size-small;
+
+                b {
+                    font-size: $size-normal;
+                }
+            }
+        }
+    }
+
+    &__detail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+
+        &-title {
+            font-size: $size-normal;
+            font-weight: $weight-semibold;
+            color: $light-color-secondary;
+            margin-top: 10px;
+        }
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+
+            @include mobile-md {
+                flex-flow: wrap;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        background: $dark-color-secondary;
+        border-radius: $radius-large;
+        border: $border-small $light-color-tertiary;
+        padding: 10px;
+        transition: all 300ms;
+        cursor: pointer;
+
+        @include mobile-md {
+            width: 160px;
+            margin-bottom: 5px;
+        }
+
+        &:hover {
+            background: $dark-color-primary;
+        }
+
+        &-checkbox {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            user-select: none;
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            input:checked~.checkmark:after {
+                display: block;
+            }
+
+            .checkmark {
+                position: absolute;
+                top: -7px;
+                right: 20px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 6px;
+                    top: 1px;
+                    width: 10px;
+                    height: 15px;
+                    border: solid $green-color-tertiary;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+
+            h4 {
+                font-size: $size-small;
+                font-weight: $weight-normal;
+                color: $light-color-secondary;
+
+                @include mobile-md {
+                    font-size: $size-tiny;
+                }
+            }
+        }
+
+        &-image {
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: $radius-small;
+            }
+        }
+
+        &-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 5px;
+
+            p {
+                display: flex;
+                flex-direction: column;
+                font-size: $size-tiny;
+                font-weight: $weight-light;
+                color: $light-color-secondary;
+            }
+
+            strong {
+                font-size: $size-normal;
+                font-weight: $weight-semibold;
+                color: $light-color-secondary;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+
+        @include mobile-md {
+            margin-bottom: 20px;
+        }
+    }
+}

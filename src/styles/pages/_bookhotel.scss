@@ -1,0 +1,87 @@
+.hotel {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__options {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: wrap;
+        margin-top: 20px;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &-item {
+            width: 300px;
+            margin: 20px 0;
+            position: relative;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            .v-input {
+                display: flex;
+                flex-direction: row-reverse;
+
+                .v-input__prepend-outer {
+                    margin: 0;
+                    position: absolute;
+                    right: 10px;
+                }
+            }
+        }
+
+        &-alert {
+            position: absolute;
+            border-radius: $radius-large !important;
+            font-size: $size-tiny;
+            margin-top: 5px;
+        }
+
+        &-btn {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            padding: 0 40px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.v-stepper__content {
+    height: 600px;
+    padding: 20px 40px !important;
+
+    @include tablet {
+        padding: 0 20px !important;
+    }
+}
+
+.v-application .v-alert.hotel__options-alert.v-sheet.theme--dark.warning {
+    background-color: $red-color-primary !important;
+    padding: 5px 10px 5px 0;
+    color: $light-color-primary;
+
+    .v-alert__icon {
+        margin: 0 !important;
+    }
+}
+
+// date picker reset:
+
+.v-application .v-picker__title {
+    background-color: $green-color-primary !important;
+    opacity: 0.7;
+}
+
+.v-picker__title__btn--active {
+    display: none;
+}

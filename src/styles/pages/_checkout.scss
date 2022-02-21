@@ -1,0 +1,89 @@
+.checkout {
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__hotel {
+
+        @include tablet {
+            margin-top: 20px;
+        }
+
+        &-name {
+            color: $light-color-secondary;
+            font-weight: $weight-semibold;
+            font-size: 16px;
+
+            span {
+                font-size: $size-tiny;
+                font-weight: $weight-light;
+            }
+        }
+
+        &-details {
+            padding: 5px 0;
+            margin: 15px 0;
+        }
+
+        &-box {
+            font-size: $size-normal;
+            color: $light-color-secondary;
+            font-weight: $weight-light;
+            margin: 10px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            b {
+                font-weight: $weight-semibold;
+                margin-right: 5px;
+            }
+
+            span {
+                font-size: $size-small;
+            }
+        }
+
+        &-coupon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__coupon {
+        width: 150px !important;
+
+        .v-input__slot {
+            min-height: 36px !important;
+        }
+
+        .v-label {
+            color: $light-color-secondary !important;
+            top: 8px !important;
+            font-size: $size-tiny !important;
+        }
+
+        .v-label--active {
+            transform: translateY(-18px) scale(0.9) !important;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        @include tablet {
+            margin: 20px 0 30px;
+        }
+    }
+}

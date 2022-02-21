@@ -1,0 +1,163 @@
+.preview {
+    width: 100%;
+    height: 100%;
+    color: $light-color-secondary;
+
+    &__main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $dark-color-secondary;
+        border-radius: $radius-large;
+        border: $border-small $light-color-tertiary;
+        padding: 15px 20px;
+
+        @include tablet {
+            background: $dark-color-primary;
+            border: 0;
+            padding: 0 20px;
+        }
+
+        &-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: $green-color-primary;
+            border: $border-large $green-color-tertiary;
+
+            @include tablet {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        .v-icon {
+            color: $green-color-tertiary !important;
+        }
+
+        &-title {
+            text-transform: capitalize;
+            font-size: $size-large;
+            font-weight: $weight-semibold;
+            margin: 10px 0;
+
+            @include mobile-md {
+                font-size: 18px;
+                margin: 5px 0;
+            }
+        }
+
+        &-content {
+            font-size: $size-normal;
+            text-align: center;
+            margin: 0;
+
+            @include mobile-md {
+                font-size: $size-tiny;
+            }
+        }
+
+        &-btns {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+
+            @include tablet {
+                justify-content: center;
+                flex-flow: wrap;
+                margin: 10px 0;
+
+                .btn {
+                    margin: 10px;
+                }
+            }
+
+            @include mobile-md {
+                .btn {
+                    margin: 5px 2px;
+                }
+            }
+        }
+    }
+
+    &__details {
+        background: $dark-color-secondary;
+        border-radius: $radius-large;
+        border: $border-small $light-color-tertiary;
+        padding: 15px 20px;
+
+        @include tablet {
+            background: $dark-color-primary;
+            border: 0;
+            padding: 0 20px;
+        }
+
+        &-title {
+            text-transform: capitalize;
+            font-size: $size-large;
+            font-weight: $weight-semibold;
+            margin: 10px 0;
+
+            span {
+                font-size: $size-normal;
+                font-weight: $weight-light;
+            }
+        }
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: wrap;
+        }
+
+        &-item {
+            padding: 10px 30px;
+            background: $dark-color-primary;
+            border-radius: $radius-large;
+            border: $border-large $light-color-tertiary;
+            width: 200px;
+            margin: 15px 0;
+            font-size: $size-normal;
+
+            @include tablet {
+                width: 170px;
+            }
+
+            @include mobile-md {
+                width: 100%;
+                margin: 5px 0;
+                font-size: $size-small;
+
+                br {
+                    display: none;
+                }
+            }
+
+            span {
+                font-size: $size-small;
+
+                @include mobile-md {
+                    font-size: $size-tiny;
+                }
+            }
+        }
+
+        &-price {
+            span {
+                padding: 10px 0;
+            }
+        }
+    }
+}
